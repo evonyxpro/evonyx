@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Evonyx — Engineering Tomorrow's Solutions, Today. Advanced technology for people and businesses worldwide."/>
+<title>Evonyx — The Future Is Now</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Aurora background -->
+<div class="aurora" aria-hidden="true">
+  <div class="aurora-orb aurora-1"></div>
+  <div class="aurora-orb aurora-2"></div>
+  <div class="aurora-orb aurora-3"></div>
+</div>
+
+<!-- Scanline overlay -->
+<div class="scanlines" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════ -->
+<header class="nav" id="nav">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 40 40" fill="none">
+          <polygon points="20,2 38,11 38,29 20,38 2,29 2,11" stroke="url(#lg1)" stroke-width="1.5" fill="none"/>
+          <polygon points="20,8 32,14 32,26 20,32 8,26 8,14" stroke="url(#lg1)" stroke-width="1" fill="url(#lgfill)" opacity="0.3"/>
+          <text x="20" y="25" text-anchor="middle" font-family="Orbitron" font-size="11" font-weight="900" fill="url(#lg1)">E</text>
+          <defs>
+            <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00f5ff"/>
+              <stop offset="100%" stop-color="#7c3aed"/>
+            </linearGradient>
+            <linearGradient id="lgfill" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00f5ff"/>
+              <stop offset="100%" stop-color="#7c3aed"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="logo-text-wrap">
+        <span class="logo-name">EVONYX</span>
+        <span class="logo-sub">TECHNOLOGY</span>
+      </div>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#services" class="nav-link"><span class="nav-num">01</span>Services</a>
+      <a href="#about" class="nav-link"><span class="nav-num">02</span>About</a>
+      <a href="#why" class="nav-link"><span class="nav-num">03</span>Philosophy</a>
+      <a href="#contact" class="nav-link"><span class="nav-num">04</span>Contact</a>
+    </nav>
+
+    <a href="#contact" class="nav-btn">
+      <span>Start a Project</span>
+      <div class="nav-btn-glow"></div>
+    </a>
+
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services">01 — Services</a>
+    <a href="#about">02 — About</a>
+    <a href="#why">03 — Philosophy</a>
+    <a href="#contact">04 — Contact</a>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════
+     HERO
+═══════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <canvas id="neural" aria-hidden="true"></canvas>
+
+  <div class="hero-content">
+
+    <div class="hero-tag">
+      <span class="tag-dot"></span>
+      <span>SYSTEM ONLINE · NIGERIA · GLOBAL</span>
+      <span class="tag-dot"></span>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="ht-line ht-1">THE</span>
+      <span class="ht-line ht-2">FUTURE</span>
+      <span class="ht-line ht-3">IS <em>NOW</em></span>
+    </h1>
+
+    <div class="hero-sub-wrap">
+      <div class="hsw-line"></div>
+      <p class="hero-sub">Engineering Tomorrow's Solutions, Today</p>
+      <div class="hsw-line"></div>
+    </div>
+
+    <p class="hero-desc">
+      Evonyx is a forward-thinking technology company making advanced,<br class="br-d"/>
+      intelligent technology accessible to people and businesses worldwide.
+    </p>
+
+    <div class="hero-btns">
+      <a href="#services" class="btn-primary">
+        <span>Explore Our Work</span>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="btn-glow"></div>
+      </a>
+      <a href="#contact" class="btn-outline">
+        <span>Get In Touch</span>
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hstat">
+        <span class="hstat-n" data-target="8">0</span><span class="hstat-plus">+</span>
+        <span class="hstat-l">Services</span>
+      </div>
+      <div class="hstat-div"></div>
+      <div class="hstat">
+        <span class="hstat-n" data-target="100">0</span><span class="hstat-plus">%</span>
+        <span class="hstat-l">Committed</span>
+      </div>
+      <div class="hstat-div"></div>
+      <div class="hstat">
+        <span class="hstat-n" data-target="24">0</span><span class="hstat-plus">/7</span>
+        <span class="hstat-l">Available</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="hero-scroll-ind">
+    <div class="scroll-track"><div class="scroll-thumb"></div></div>
+    <span>SCROLL</span>
+  </div>
+
+  <!-- Floating tech badges -->
+  <div class="float-badge fb-1" aria-hidden="true"><span>AI</span></div>
+  <div class="float-badge fb-2" aria-hidden="true"><span>CLOUD</span></div>
+  <div class="float-badge fb-3" aria-hidden="true"><span>CYBER</span></div>
+  <div class="float-badge fb-4" aria-hidden="true"><span>IoT</span></div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     TICKER
+═══════════════════════════════════════ -->
+<div class="ticker-wrap">
+  <div class="ticker-inner">
+    <div class="ticker-track">
+      <span>SMART HOME</span><span class="tsep">///</span>
+      <span>ARTIFICIAL INTELLIGENCE</span><span class="tsep">///</span>
+      <span>SOFTWARE DEVELOPMENT</span><span class="tsep">///</span>
+      <span>CLOUD SERVICES</span><span class="tsep">///</span>
+      <span>CYBERSECURITY</span><span class="tsep">///</span>
+      <span>BUSINESS CONSULTING</span><span class="tsep">///</span>
+      <span>DIGITAL TRANSFORMATION</span><span class="tsep">///</span>
+      <span>AUTOMATION</span><span class="tsep">///</span>
+      <span>SMART HOME</span><span class="tsep">///</span>
+      <span>ARTIFICIAL INTELLIGENCE</span><span class="tsep">///</span>
+      <span>SOFTWARE DEVELOPMENT</span><span class="tsep">///</span>
+      <span>CLOUD SERVICES</span><span class="tsep">///</span>
+      <span>CYBERSECURITY</span><span class="tsep">///</span>
+      <span>BUSINESS CONSULTING</span><span class="tsep">///</span>
+      <span>DIGITAL TRANSFORMATION</span><span class="tsep">///</span>
+      <span>AUTOMATION</span><span class="tsep">///</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     ABOUT / INTRO
+═══════════════════════════════════════ -->
+<section class="about section-pad" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-left reveal">
+        <span class="sec-tag">// ABOUT EVONYX</span>
+        <h2 class="sec-title">We don't just build<br/><em>technology.</em><br/>We build the future.</h2>
+        <div class="about-line"></div>
+        <p class="about-p">Founded in Nigeria with a global vision, Evonyx is led by <strong>Engr. Osabuohien Richlove</strong> — an engineer who believes that the most powerful technology in the world should be within reach of every person and every business, regardless of where they are.</p>
+        <p class="about-p">We are not followers of trends. We set them. Every solution we engineer is built with precision, foresight, and an unshakeable commitment to excellence.</p>
+        <div class="about-tags">
+          <span>Nigeria 🇳🇬</span>
+          <span>Global Vision</span>
+          <span>Est. 2024</span>
+          <span>Engineering Excellence</span>
+        </div>
+      </div>
+      <div class="about-right reveal">
+        <div class="about-card">
+          <div class="ac-corner ac-tl"></div>
+          <div class="ac-corner ac-tr"></div>
+          <div class="ac-corner ac-bl"></div>
+          <div class="ac-corner ac-br"></div>
+          <div class="ac-inner">
+            <div class="ac-icon">⚡</div>
+            <h3>Our Mission</h3>
+            <p>To make advanced, intelligent technology accessible — stripping away complexity and putting transformative power into the hands of people who need it most.</p>
+          </div>
+        </div>
+        <div class="about-card about-card-2">
+          <div class="ac-corner ac-tl"></div>
+          <div class="ac-corner ac-tr"></div>
+          <div class="ac-corner ac-bl"></div>
+          <div class="ac-corner ac-br"></div>
+          <div class="ac-inner">
+            <div class="ac-icon">🌍</div>
+            <h3>Our Vision</h3>
+            <p>A world where no business is left behind by technology — where every organisation, everywhere, can harness the full power of the digital age.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SERVICES
+═══════════════════════════════════════ -->
+<section class="services section-pad" id="services">
+  <div class="wrap">
+    <div class="sec-header reveal">
+      <span class="sec-tag">// WHAT WE BUILD</span>
+      <h2 class="sec-title">Our <em>Services</em></h2>
+      <p class="sec-desc">Eight core disciplines. One unified vision. Infinite possibilities.</p>
+    </div>
+
+    <div class="svc-grid">
+
+      <div class="svc-card reveal">
+        <div class="svc-num">01</div>
+        <div class="svc-glyph">🏠</div>
+        <h3>Smart Home Solutions</h3>
+        <p>Intelligent environments that respond to how you live — lighting, security, climate and entertainment unified under seamless control.</p>
+        <div class="svc-bar"></div>
+        <div class="svc-hover-glow"></div>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-num">02</div>
+        <div class="svc-glyph">🧠</div>
+        <h3>Artificial Intelligence</h3>
+        <p>Real-world AI that automates decisions, surfaces insight from data, and multiplies what your team can accomplish.</p>
+        <div class="svc-bar"></div>
+        <div class="svc-hover-glow"></div>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-num">03</div>
+        <div class="svc-glyph">💻</div>
+        <h3>Software Development</h3>
+        <p>Bespoke web, mobile and enterprise applications — engineered for scale, built for humans, designed to last.</p>
+        <div class="svc-bar"></div>
+        <div class="svc-hover-glow"></div>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-num">04</div>
+        <div class="svc-glyph">☁️</div>
+        <h3>Cloud Services</h3>
+        <p>Elastic, resilient infrastructure that scales with your ambition — reducing cost and maximising reliability.</p>
+        <div class="svc-bar"></div>
+        <div class="svc-hover-glow"></div>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-num">05</div>
+        <div class="svc-glyph">🛡️</div>
+        <h3>Cybersecurity</h3>
+        <p>Zero-trust protection built from the ground up — threat detection, compliance and a security culture that actually holds.</p>
+        <div class="svc-bar"></div>
+        <div class="svc-hover-glow"></div>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-num">06</div>
+        <div class="svc-glyph">📊</div>
+        <h3>Business Tech Consulting</h3>
+        <p>Strategic advisory that cuts through noise — helping you choose, implement and maximise technology that fits your reality.</p>
+        <div class="svc-bar"></div>
+        <div class="svc-hover-glow"></div>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-num">07</div>
+        <div class="svc-glyph">🚀</div>
+        <h3>Digital Transformation</h3>
+        <p>End-to-end modernisation — legacy migration, process redesign and cultural change that turns organisations into digital leaders.</p>
+        <div class="svc-bar"></div>
+        <div class="svc-hover-glow"></div>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-num">08</div>
+        <div class="svc-glyph">⚙️</div>
+        <h3>Automation Solutions</h3>
+        <p>Intelligent workflows that eliminate repetition, accelerate operations and free your people for meaningful, high-value work.</p>
+        <div class="svc-bar"></div>
+        <div class="svc-hover-glow"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     PHILOSOPHY
+═══════════════════════════════════════ -->
+<section class="philosophy section-pad" id="why">
+  <div class="wrap">
+    <div class="sec-header reveal">
+      <span class="sec-tag">// WHY EVONYX</span>
+      <h2 class="sec-title">Built on a different<br/><em>philosophy</em></h2>
+    </div>
+    <div class="phi-grid">
+      <div class="phi-item reveal">
+        <div class="phi-icon">◈</div>
+        <div class="phi-num-big">01</div>
+        <h3>Accessible by Design</h3>
+        <p>The most sophisticated technology should feel effortless. We translate complexity into clarity — for every user, everywhere.</p>
+      </div>
+      <div class="phi-item reveal">
+        <div class="phi-icon">◈</div>
+        <div class="phi-num-big">02</div>
+        <h3>Precision Over Volume</h3>
+        <p>We take fewer engagements so we can give each one our full engineering expertise. Quality is never traded for speed.</p>
+      </div>
+      <div class="phi-item reveal">
+        <div class="phi-icon">◈</div>
+        <div class="phi-num-big">03</div>
+        <h3>Future-Ready Always</h3>
+        <p>We design for where the world is going — not where it has been. Every solution is built to evolve and compound in value.</p>
+      </div>
+      <div class="phi-item reveal">
+        <div class="phi-icon">◈</div>
+        <div class="phi-num-big">04</div>
+        <h3>People at the Core</h3>
+        <p>Technology exists to serve people. Empathy, human understanding and genuine care drive every decision we make.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     COMING SOON
+═══════════════════════════════════════ -->
+<section class="coming section-pad">
+  <div class="wrap">
+    <div class="coming-inner reveal">
+      <div class="coming-badge">
+        <span class="cbadge-dot"></span>
+        <span>LAUNCHING SOON</span>
+      </div>
+      <h2 class="coming-title">Something <em>extraordinary</em><br/>is almost ready.</h2>
+      <p class="coming-sub">Our full platform launches soon. Be among the first to experience the future.</p>
+      <form class="coming-form" id="notifyForm">
+        <div class="cf-wrap">
+          <input type="email" placeholder="Enter your email to be notified" aria-label="Email" required/>
+          <button type="submit">
+            <span>Notify Me</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <p class="coming-note" id="notifyNote" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════ -->
+<section class="contact section-pad" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <span class="sec-tag">// GET IN TOUCH</span>
+        <h2 class="sec-title">Let's build<br/><em>the future</em><br/>together.</h2>
+        <p class="contact-p">Have a project? A challenge? Or just want to understand what's possible? We want to hear from you.</p>
+        <div class="contact-info">
+          <div class="ci-item">
+            <span class="ci-label">EMAIL</span>
+            <a href="mailto:evonyx@gmail.com" class="ci-val">evonyx@gmail.com</a>
+          </div>
+          <div class="ci-item">
+            <span class="ci-label">FOUNDER</span>
+            <span class="ci-val">Engr. Osabuohien Richlove</span>
+          </div>
+          <div class="ci-item">
+            <span class="ci-label">LOCATION</span>
+            <span class="ci-val">Nigeria 🇳🇬 · Global 🌍</span>
+          </div>
+          <div class="ci-item">
+            <span class="ci-label">RESPONSE</span>
+            <span class="ci-val">Within 24 Hours</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right reveal">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/mqeokypn" method="POST">
+          <div class="cf-row">
+            <div class="cf-field">
+              <label for="fname">Full Name</label>
+              <input type="text" id="fname" name="name" placeholder="Your full name" required/>
+            </div>
+            <div class="cf-field">
+              <label for="femail">Email Address</label>
+              <input type="email" id="femail" name="email" placeholder="your@email.com" required/>
+            </div>
+          </div>
+          <div class="cf-field">
+            <label for="fservice">Service of Interest</label>
+            <select id="fservice" name="service">
+              <option value="">Select a service…</option>
+              <option>Smart Home Solutions</option>
+              <option>Artificial Intelligence</option>
+              <option>Software Development</option>
+              <option>Cloud Services</option>
+              <option>Cybersecurity</option>
+              <option>Business Technology Consulting</option>
+              <option>Digital Transformation</option>
+              <option>Automation Solutions</option>
+              <option>Other / Not Sure Yet</option>
+            </select>
+          </div>
+          <div class="cf-field">
+            <label for="fmsg">Message</label>
+            <textarea id="fmsg" name="message" rows="4" placeholder="Tell us about your project or challenge…" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full">
+            <span>Send Message</span>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="btn-glow"></div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <svg viewBox="0 0 40 40" fill="none">
+              <polygon points="20,2 38,11 38,29 20,38 2,29 2,11" stroke="url(#lg2)" stroke-width="1.5" fill="none"/>
+              <text x="20" y="25" text-anchor="middle" font-family="Orbitron" font-size="11" font-weight="900" fill="url(#lg2)">E</text>
+              <defs><linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00f5ff"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient></defs>
+            </svg>
+          </div>
+          <div class="logo-text-wrap">
+            <span class="logo-name">EVONYX</span>
+            <span class="logo-sub">TECHNOLOGY</span>
+          </div>
+        </a>
+        <p class="footer-tag">The Future Is Now</p>
+        <p class="footer-sub-tag">Engineering Tomorrow's Solutions, Today</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="#services">Smart Home</a>
+          <a href="#services">AI Solutions</a>
+          <a href="#services">Software Dev</a>
+          <a href="#services">Cloud</a>
+        </div>
+        <div class="footer-col">
+          <h4>More Services</h4>
+          <a href="#services">Cybersecurity</a>
+          <a href="#services">Consulting</a>
+          <a href="#services">Transformation</a>
+          <a href="#services">Automation</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#about">About</a>
+          <a href="#why">Philosophy</a>
+          <a href="#contact">Contact</a>
+          <a href="about.html">About Page</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Evonyx Technology. All rights reserved. · Nigeria 🇳🇬 · Global 🌍</p>
+      <p>Founded by Engr. Osabuohien Richlove</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
